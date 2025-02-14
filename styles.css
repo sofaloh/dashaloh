@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    background-color: #f9dcde;
+    overflow: hidden;
+    position: relative;
+}
+
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    font-size: 24px;
+    color: red;
+    animation: floatUp 4s linear infinite, fadeOut 4s linear infinite;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(100vh) translateX(0);
+    }
+    to {
+        transform: translateY(-10vh) translateX(calc(-50px + 100px * random()));
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.congratulation {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+ .dotacring img{
+     position:absolute;
+     width: 300px;
+     transform: translate(-50%, -50%);  
+     z-index: 1;
+     display: block;
+  width: 320px;
+  height: 250px;
+  border: 10px groove rgb(241, 142, 250);
+ }
+ .label{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', serif;
+    color: rgb(173, 19, 19);
+    font-weight: 300;
+    font-size: 20px; 
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+.foto img{
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    z-index: 1;
+    width: 100px;
+    height: auto;  
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#vidosik{
+    top:67%;
+    left: 45%;
+    position: fixed;
+    width: 130px;
+    z-index: 5;
+    visibility: hidden;
+}
+.serdce{
+    top:70%;
+    left: 46%;
+    position: fixed;
+    width: 30px;
+    z-index: 5;
+    visibility: hidden;
+}
+#cong {
+    top:70%;
+    left: 60%;
+    position: fixed;
+    width: 150px;
+    z-index: 5;
+    visibility: hidden;
+}
+@media (max-width: 480px) {
+    .congratulation{
+        top:20%;
+        left:50.5%;
+    }
+    .dotacring img{
+        width: 300px !important;
+    }
+    .label {
+        top: 47%;
+    }
+    #vidosik {
+        left: 35%;
+        width: 120px;
+    }
+    .serdce{
+        left: 37%;
+        top: 69%;
+    }
+}
