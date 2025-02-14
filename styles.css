@@ -120,6 +120,7 @@ body {
     }
     .label {
         top: 47%;
+        font-size: 10px;
     }
     #vidosik {
         left: 35%;
